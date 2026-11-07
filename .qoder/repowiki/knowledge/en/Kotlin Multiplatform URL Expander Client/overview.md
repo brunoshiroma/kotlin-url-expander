@@ -1,0 +1,1 @@
+Compose Multiplatform client for the go-url-expander service, providing shared UI plus Android and iOS platform-specific WebView, clipboard, share, and HTTP transport.

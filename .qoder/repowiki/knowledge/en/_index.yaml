@@ -1,0 +1,28 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: en-US
+branch: main
+nodes_managed: true
+exported_at: "2026-11-07T13:00:21Z"
+modules:
+    "":
+        dir_name: Kotlin Multiplatform URL Expander Client
+        title: Kotlin Multiplatform URL Expander Client
+        scope:
+            - .github/
+            - composeApp/
+            - gradle/
+            - iosApp/
+            - .gitignore
+            - .sdkmanrc
+            - README.md
+            - build.gradle.kts
+            - gradle.properties
+            - gradlew.bat
+            - settings.gradle.kts
+            - LICENSE
+            - gradlew
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

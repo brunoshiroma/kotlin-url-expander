@@ -1,0 +1,1 @@
+Kotlin 2.1.20, Compose Multiplatform 1.8.0, Android Gradle Plugin 8.7.3, Ktor 3.1.3 client (OkHttp on Android, Darwin on iOS), kotlinx.coroutines 1.10.2, androidx.activity-compose 1.10.1. Java 17 toolchain enforced via `.sdkmanrc` and the foojay-resolver-convention plugin.

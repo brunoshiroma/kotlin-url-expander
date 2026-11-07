@@ -1,0 +1,20 @@
+schema_version: 1
+module_path: ""
+title: Kotlin Multiplatform URL Expander Client
+scope:
+    - .github/
+    - composeApp/
+    - gradle/
+    - iosApp/
+    - .gitignore
+    - .sdkmanrc
+    - README.md
+    - build.gradle.kts
+    - gradle.properties
+    - gradlew.bat
+    - settings.gradle.kts
+    - LICENSE
+    - gradlew
+source_files: []
+depends_on: []
+related_to: []

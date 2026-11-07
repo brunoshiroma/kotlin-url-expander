@@ -1,0 +1,4 @@
+- Platform-specific behavior is exposed through the `PlatformActions` interface consumed by shared code, with concrete implementations in `androidMain` and `iosMain` rather than conditional branches in common code.
+- Platform-specific UI components are declared as `expect fun` in `commonMain` (e.g. `PlatformWebView`) and implemented per-target under the matching source set directory.
+- Dependencies and plugin versions are centrally managed in `gradle/libs.versions.toml` and referenced via `alias(libs.plugins.*)` / `libs.*` in Gradle scripts instead of inline version strings.
+- HTTP calls use Ktor's suspend functions with `runCatching` at the call site to convert failures into nullable results returned to the Compose UI.

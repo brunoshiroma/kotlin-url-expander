@@ -1,0 +1,7 @@
+Single Gradle module (`:composeApp`) built with Kotlin Multiplatform + Compose Multiplatform. Source layout follows the standard KMP convention:
+- `commonMain` holds the Compose UI (`App.kt`), the Ktor-based HTTP client (`GoUrlExpanderClient.kt` calling `https://go-url-expander.brunoshiroma.com/expand`), and the `PlatformActions` interface that isolates platform capabilities (clipboard, share, external open).
+- `androidMain` provides an `Activity` entry point and an OkHttp-backed Ktor client plus a `PlatformWebView` implementation using Android's WebView.
+- `iosMain` provides a SwiftUI host (`iosApp/ContentView.swift`, `iOSApp.swift`) and a WKWebView-based `PlatformWebView` plus Darwin-backed Ktor client.
+- `commonTest` runs on JVM against a mock Ktor server.
+
+Dependency direction is one-way: `androidMain` and `iosMain` depend on `commonMain`; the shared code never imports platform APIs directly — it consumes `PlatformActions` and the `expect PlatformWebView` declaration. The root `build.gradle.kts` only declares plugins; version management is centralized in `gradle/libs.versions.toml`. CI in `.github/workflows/build.yml` builds Android APKs on Ubuntu and links the static iOS framework on macOS via Gradle tasks.
